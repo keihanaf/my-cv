@@ -211,6 +211,6 @@ Currently focused on advancing my skills in full-stack development while contrib
   ],
   contact: {
     telegram: "keihanaf",
-    phone: "093813859849",
+    phone: "09381385984",
   },
 };

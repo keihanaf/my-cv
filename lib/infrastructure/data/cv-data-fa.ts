@@ -211,6 +211,6 @@ export const cvDataFa: CVData = {
   ],
   contact: {
     telegram: "keihanaf",
-    phone: "۰۹۳۸۱۳۸۵۹۸۴۹",
+    phone: "۰۹۳۸۱۳۸۵۹۸۴",
   },
 };
