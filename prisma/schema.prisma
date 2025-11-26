@@ -14,6 +14,8 @@ model Visitor {
   device    String
   userAgent String?
   country   String?
+  city      String?
+  region    String?
   createdAt DateTime @default(now())
 
   @@unique([ip, device])

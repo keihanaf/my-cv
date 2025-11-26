@@ -64,13 +64,12 @@ export default function LoginPage() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background:
-          "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)",
+        background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* Animated background elements */}
+      {/* Animated background */}
       <Box
         sx={{
           position: "absolute",
@@ -79,31 +78,31 @@ export default function LoginPage() {
           pointerEvents: "none",
         }}
       >
-        {[...Array(6)].map((_, i) => (
+        {[...Array(3)].map((_, i) => (
           <MotionBox
             key={i}
-            initial={{ opacity: 0.1, scale: 0 }}
+            initial={{ opacity: 0, scale: 0 }}
             animate={{
-              opacity: [0.1, 0.3, 0.1],
+              opacity: [0.05, 0.15, 0.05],
               scale: [1, 1.2, 1],
-              x: [0, 50, 0],
-              y: [0, -30, 0],
+              x: [0, 100, 0],
+              y: [0, -50, 0],
             }}
             transition={{
-              duration: 8 + i * 2,
+              duration: 10 + i * 3,
               repeat: Infinity,
-              delay: i * 0.5,
+              delay: i * 1.5,
             }}
             sx={{
               position: "absolute",
-              width: 300 + i * 100,
-              height: 300 + i * 100,
+              width: 400 + i * 150,
+              height: 400 + i * 150,
               borderRadius: "50%",
               background: `radial-gradient(circle, ${
                 i % 2 === 0 ? "#3b82f6" : "#8b5cf6"
-              }20 0%, transparent 70%)`,
-              left: `${(i * 20) % 80}%`,
-              top: `${(i * 15) % 70}%`,
+              }40 0%, transparent 70%)`,
+              left: `${(i * 30) % 70}%`,
+              top: `${(i * 25) % 60}%`,
             }}
           />
         ))}
@@ -137,8 +136,8 @@ export default function LoginPage() {
         >
           <Box
             sx={{
-              width: 80,
-              height: 80,
+              width: 70,
+              height: 70,
               borderRadius: "50%",
               background: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
               display: "flex",
@@ -147,7 +146,7 @@ export default function LoginPage() {
               boxShadow: "0 8px 32px rgba(59, 130, 246, 0.3)",
             }}
           >
-            <Analytics sx={{ fontSize: 40, color: "white" }} />
+            <Analytics sx={{ fontSize: 36, color: "white" }} />
           </Box>
         </MotionBox>
 
@@ -171,7 +170,7 @@ export default function LoginPage() {
           textAlign="center"
           sx={{ color: "rgba(148, 163, 184, 0.8)" }}
         >
-          Sign in to access analytics dashboard
+          Sign in to access analytics
         </Typography>
 
         {error && (
@@ -214,18 +213,27 @@ export default function LoginPage() {
               "& .MuiOutlinedInput-root": {
                 borderRadius: 2,
                 bgcolor: "rgba(15, 23, 42, 0.5)",
+                transition: "all 0.3s ease",
                 "& fieldset": {
                   borderColor: "rgba(148, 163, 184, 0.2)",
+                  transition: "all 0.3s ease",
                 },
                 "&:hover fieldset": {
                   borderColor: "rgba(59, 130, 246, 0.5)",
                 },
-                "&.Mui-focused fieldset": {
-                  borderColor: "#3b82f6",
+                "&.Mui-focused": {
+                  bgcolor: "rgba(15, 23, 42, 0.7)",
+                  "& fieldset": {
+                    borderColor: "#3b82f6",
+                    borderWidth: 2,
+                  },
                 },
               },
               "& .MuiInputLabel-root": {
                 color: "rgba(148, 163, 184, 0.6)",
+                "&.Mui-focused": {
+                  color: "#3b82f6",
+                },
               },
               "& .MuiInputBase-input": {
                 color: "#f1f5f9",
@@ -264,18 +272,27 @@ export default function LoginPage() {
               "& .MuiOutlinedInput-root": {
                 borderRadius: 2,
                 bgcolor: "rgba(15, 23, 42, 0.5)",
+                transition: "all 0.3s ease",
                 "& fieldset": {
                   borderColor: "rgba(148, 163, 184, 0.2)",
+                  transition: "all 0.3s ease",
                 },
                 "&:hover fieldset": {
                   borderColor: "rgba(59, 130, 246, 0.5)",
                 },
-                "&.Mui-focused fieldset": {
-                  borderColor: "#3b82f6",
+                "&.Mui-focused": {
+                  bgcolor: "rgba(15, 23, 42, 0.7)",
+                  "& fieldset": {
+                    borderColor: "#3b82f6",
+                    borderWidth: 2,
+                  },
                 },
               },
               "& .MuiInputLabel-root": {
                 color: "rgba(148, 163, 184, 0.6)",
+                "&.Mui-focused": {
+                  color: "#3b82f6",
+                },
               },
               "& .MuiInputBase-input": {
                 color: "#f1f5f9",
@@ -296,9 +313,14 @@ export default function LoginPage() {
               textTransform: "none",
               background: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
               boxShadow: "0 4px 20px rgba(59, 130, 246, 0.3)",
+              transition: "all 0.3s ease",
               "&:hover": {
                 background: "linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)",
                 boxShadow: "0 6px 30px rgba(59, 130, 246, 0.4)",
+                transform: "translateY(-2px)",
+              },
+              "&:active": {
+                transform: "translateY(0)",
               },
               "&:disabled": {
                 background: "rgba(148, 163, 184, 0.2)",

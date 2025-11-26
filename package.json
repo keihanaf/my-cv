@@ -9,6 +9,7 @@
     "lint": "eslint",
     "db:push": "prisma db push",
     "db:push:local": "prisma db push --schema=prisma/schema.local.prisma",
+    "db:push:prod": "POSTGRES_PRISMA_URL=\"postgres://postgres.anicnohuztcciybxzcsb:P1LM3CZiMBY9oueq@aws-1-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require&pgbouncer=true\" POSTGRES_URL_NON_POOLING=\"postgres://postgres.anicnohuztcciybxzcsb:P1LM3CZiMBY9oueq@aws-1-us-east-1.pooler.supabase.com:5432/postgres?sslmode=require\" prisma db push",
     "db:studio": "prisma studio",
     "db:studio:local": "prisma studio --schema=prisma/schema.local.prisma",
     "db:generate": "prisma generate",

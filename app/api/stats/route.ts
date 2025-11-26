@@ -20,7 +20,15 @@ export async function GET() {
       prisma.visitor.findMany({
         orderBy: { createdAt: "desc" },
         take: 20,
-        select: { ip: true, device: true, userAgent: true, createdAt: true },
+        select: {
+          ip: true,
+          device: true,
+          userAgent: true,
+          country: true,
+          city: true,
+          region: true,
+          createdAt: true,
+        },
       }),
     ]);
 

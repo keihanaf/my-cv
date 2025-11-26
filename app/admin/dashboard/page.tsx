@@ -28,6 +28,7 @@ import {
   Refresh,
   Analytics,
   TrendingUp,
+  LocationOn,
 } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -41,6 +42,9 @@ interface Stats {
     ip: string;
     device: string;
     userAgent: string;
+    country: string | null;
+    city: string | null;
+    region: string | null;
     createdAt: string;
   }>;
 }
@@ -233,7 +237,6 @@ export default function DashboardPage() {
       }}
     >
       <Box sx={{ maxWidth: 1400, mx: "auto" }}>
-        {/* Header */}
         <MotionBox
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -315,7 +318,6 @@ export default function DashboardPage() {
           </Box>
         </MotionBox>
 
-        {/* Stats Cards */}
         <Grid container spacing={3} sx={{ mb: 4 }}>
           <Grid size={{ xs: 12, sm: 6, md: 3 }}>
             <StatCard
@@ -355,7 +357,6 @@ export default function DashboardPage() {
           </Grid>
         </Grid>
 
-        {/* Recent Visitors Table */}
         <MotionPaper
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -401,16 +402,16 @@ export default function DashboardPage() {
                       borderColor: "rgba(255,255,255,0.08)",
                     }}
                   >
-                    IP Address
+                    Location
                   </TableCell>
                   <TableCell
                     sx={{
                       color: "#94a3b8",
                       borderColor: "rgba(255,255,255,0.08)",
-                      display: { xs: "none", md: "table-cell" },
+                      display: { xs: "none", lg: "table-cell" },
                     }}
                   >
-                    User Agent
+                    IP Address
                   </TableCell>
                   <TableCell
                     sx={{
@@ -453,6 +454,35 @@ export default function DashboardPage() {
                           borderColor: "rgba(255,255,255,0.05)",
                         }}
                       >
+                        <Box
+                          sx={{ display: "flex", alignItems: "center", gap: 1 }}
+                        >
+                          <LocationOn sx={{ fontSize: 16, color: "#64748b" }} />
+                          <Box>
+                            <Typography
+                              sx={{ fontSize: "0.875rem", fontWeight: 500 }}
+                            >
+                              {visitor.city || "Unknown"}
+                              {visitor.city && visitor.country && ", "}
+                              {visitor.country || ""}
+                            </Typography>
+                            {visitor.region && (
+                              <Typography
+                                sx={{ fontSize: "0.75rem", color: "#64748b" }}
+                              >
+                                {visitor.region}
+                              </Typography>
+                            )}
+                          </Box>
+                        </Box>
+                      </TableCell>
+                      <TableCell
+                        sx={{
+                          color: "#94a3b8",
+                          borderColor: "rgba(255,255,255,0.05)",
+                          display: { xs: "none", lg: "table-cell" },
+                        }}
+                      >
                         <Typography
                           sx={{
                             fontFamily: "monospace",
@@ -460,18 +490,6 @@ export default function DashboardPage() {
                           }}
                         >
                           {visitor.ip}
-                        </Typography>
-                      </TableCell>
-                      <TableCell
-                        sx={{
-                          color: "#94a3b8",
-                          borderColor: "rgba(255,255,255,0.05)",
-                          maxWidth: 300,
-                          display: { xs: "none", md: "table-cell" },
-                        }}
-                      >
-                        <Typography noWrap sx={{ fontSize: "0.8rem" }}>
-                          {visitor.userAgent}
                         </Typography>
                       </TableCell>
                       <TableCell
