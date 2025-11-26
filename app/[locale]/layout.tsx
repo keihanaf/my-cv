@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { ThemeProvider } from "@/lib/presentation/providers/ThemeProvider";
 import { Box } from "@mui/material";
+import { VisitorTracker } from "@/lib/presentation/components/VisitorTracker";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -52,6 +53,7 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider direction={isRtl ? "rtl" : "ltr"}>
+            <VisitorTracker />
             <Box sx={{ minHeight: "100vh" }}>{children}</Box>
           </ThemeProvider>
         </NextIntlClientProvider>

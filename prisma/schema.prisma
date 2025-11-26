@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Visitor {
+  id        String   @id @default(cuid())
+  ip        String
+  device    String
+  userAgent String?
+  country   String?
+  createdAt DateTime @default(now())
+
+  @@unique([ip, device])
+  @@index([createdAt])
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  username  String   @unique
+  password  String
+  createdAt DateTime @default(now())
+}
