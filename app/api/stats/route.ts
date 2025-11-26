@@ -24,10 +24,10 @@ export async function GET() {
       }),
     ]);
 
-    const deviceStats = byDevice.reduce((acc, item) => {
+    const deviceStats = byDevice.reduce<Record<string, number>>((acc, item) => {
       acc[item.device] = item._count.device;
       return acc;
-    }, {} as Record<string, number>);
+    }, {});
 
     return NextResponse.json({
       total,
