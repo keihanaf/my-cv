@@ -8,9 +8,12 @@
     "start": "next start",
     "lint": "eslint",
     "db:push": "prisma db push",
+    "db:push:local": "prisma db push --schema=prisma/schema.local.prisma",
     "db:studio": "prisma studio",
+    "db:studio:local": "prisma studio --schema=prisma/schema.local.prisma",
     "db:generate": "prisma generate",
-    "db:reset": "rm -f prisma/dev.db && prisma db push"
+    "db:reset": "rm -f prisma/dev.db && pnpm db:push:local",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
@@ -19,6 +22,7 @@
     "@mui/icons-material": "^7.3.5",
     "@mui/material": "^7.3.5",
     "@prisma/client": "5.22.0",
+    "@vercel/postgres": "^0.10.0",
     "autoprefixer": "^10.4.22",
     "bcryptjs": "^3.0.3",
     "framer-motion": "^12.23.24",
