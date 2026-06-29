@@ -58,16 +58,18 @@ export function ProjectsSection({
               ))}
             </Box>
           )}
-          <Button
-            component={Link}
-            href={project.url}
-            target="_blank"
-            variant="contained"
-            endIcon={project.type === "main" ? <OpenInNew /> : <GitHub />}
-            sx={{ borderRadius: 2 }}
-          >
-            {viewProjectLabel}
-          </Button>
+          {project.url && (
+            <Button
+              component={Link}
+              href={project.url}
+              target="_blank"
+              variant="contained"
+              endIcon={project.type === "main" ? <OpenInNew /> : <GitHub />}
+              sx={{ borderRadius: 2 }}
+            >
+              {viewProjectLabel}
+            </Button>
+          )}
         </CardContent>
       </AnimatedCard>
     </Grid>

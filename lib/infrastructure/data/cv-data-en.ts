@@ -88,7 +88,7 @@ Currently focused on advancing my skills in full-stack development while contrib
       id: "1",
       company: "Treata",
       position: "Frontend Tech Lead",
-      duration: "1 year",
+      duration: "1 year and 7 months",
       current: true,
       description:
         "Leading the frontend team as Tech Lead. Working across all areas including web, mobile, and full-stack development. Building scalable applications and mentoring team members.",
@@ -125,8 +125,8 @@ Currently focused on advancing my skills in full-stack development while contrib
       id: "6",
       title: "CRM Platform",
       description:
-        "Personal project - A microservices-based Customer Relationship Management system built with a distributed architecture and multiple backend services.",
-      url: "https://customer-relationship-management-one.vercel.app/login",
+        "A microservices-based Customer Relationship Management system built with a distributed architecture and multiple backend services.",
+      url: "https://github.com/keihanaf/customer-relationship-management",
       type: "main",
       technologies: [
         "Next.js",
@@ -135,6 +135,73 @@ Currently focused on advancing my skills in full-stack development while contrib
         "FastAPI",
         "Node.js",
         "Microservices",
+      ],
+    },
+    {
+      id: "7",
+      title: "Intelio Platform",
+      description:
+        "A modern RTL-first IoT dashboard and administrative platform built at Treata. Features tenant-aware multi-tenancy, device and gateway management, analytics with real-time charts, alert rules, messaging channels, drag-and-drop dashboards, PWA support, and a production-ready Docker + Nginx deployment.",
+      url: "https://app.intelio.ir",
+      type: "main",
+      technologies: [
+        "React 19",
+        "Vite",
+        "TanStack Query",
+        "Redux Toolkit",
+        "Tailwind CSS",
+        "React Router",
+        "Zod",
+        "Chart.js",
+        "Docker",
+        "Nginx",
+      ],
+    },
+    {
+      id: "8",
+      title: "Kartina Watch",
+      description:
+        "Freelance full-stack project built entirely by me — a modern e-commerce web application with server-side rendering, database management, and a complete admin panel.",
+      url: "https://kartina-watch.ir",
+      type: "main",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "TailwindCSS",
+      ],
+    },
+    {
+      id: "9",
+      title: "iLive Demo Landing",
+      description:
+        "Landing page for the iLive platform, built with Next.js and connected to a WordPress CMS backend for content management.",
+      url: "https://demo.ilive.ir",
+      type: "main",
+      technologies: ["Next.js", "WordPress CMS", "REST API"],
+    },
+    {
+      id: "10",
+      title: "Intelio Demo Landing",
+      description:
+        "Landing page for the Intelio platform, built with Next.js and connected to a WordPress CMS backend for content management.",
+      url: "https://demo.intelio.ir",
+      type: "main",
+      technologies: ["Next.js", "WordPress CMS", "REST API"],
+    },
+    {
+      id: "11",
+      title: "QCK Admin Panels",
+      description:
+        "A suite of 5 admin panels for various platforms. Currently not publicly visible — available for demonstration upon request.",
+      url: "",
+      type: "main",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Ant Design",
+        "TanStack Query",
       ],
     },
     {
@@ -168,6 +235,23 @@ Currently focused on advancing my skills in full-stack development while contrib
         "Real-time notification management system with WebSocket integration and priority queuing.",
       url: "https://github.com/keihanaf/notification-center",
       type: "mini",
+    },
+    {
+      id: "12",
+      title: "Voice AI",
+      description:
+        "Audio signal reconstruction using metaheuristic evolutionary algorithms. Upload or record a .wav file and watch GA, PSO, or DE converge toward the original waveform in real time.",
+      url: "https://github.com/keihanaf/voice-ai",
+      type: "mini",
+      technologies: [
+        "Next.js",
+        "React 19",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "Prisma",
+        "Web Audio API",
+        "Recharts",
+      ],
     },
   ],
   socials: [

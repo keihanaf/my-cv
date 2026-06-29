@@ -88,7 +88,7 @@ export const cvDataFa: CVData = {
       id: "1",
       company: "تریتا",
       position: "تک لید فرانت‌اند",
-      duration: "۱ سال",
+      duration: "۱ سال و ۷ ماه",
       current: true,
       description:
         "رهبری تیم فرانت‌اند به عنوان تک لید. فعالیت در تمام حوزه‌ها شامل وب، موبایل و توسعه فول‌استک. ساخت برنامه‌های مقیاس‌پذیر و منتورینگ اعضای تیم.",
@@ -125,8 +125,8 @@ export const cvDataFa: CVData = {
       id: "6",
       title: "پلتفرم CRM",
       description:
-        "پروژه شخصی - سیستم مدیریت ارتباط با مشتری مبتنی بر معماری میکروسرویس با سرویس‌های بک‌اند متعدد.",
-      url: "https://customer-relationship-management-one.vercel.app/login",
+        "سیستم مدیریت ارتباط با مشتری مبتنی بر معماری میکروسرویس با سرویس‌های بک‌اند متعدد.",
+      url: "https://github.com/keihanaf/customer-relationship-management",
       type: "main",
       technologies: [
         "Next.js",
@@ -135,6 +135,73 @@ export const cvDataFa: CVData = {
         "FastAPI",
         "Node.js",
         "Microservices",
+      ],
+    },
+    {
+      id: "7",
+      title: "پلتفرم اینتلیو",
+      description:
+        "داشبورد مدرن IoT و پلتفرم مدیریتی RTL-first ساخته شده در سازمان تریتا. شامل چندمست_rentه‌سازی مبتنی بر tenant، مدیریت دستگاه‌ها و gateway‌ها، آنالیتیکس با چارت‌های لحظه‌ای، قوانین هشدار، کانال‌های پیام‌رسانی، داشبورد drag-and-drop، پشتیبانی PWA و استقرار production-ready با Docker + Nginx.",
+      url: "https://app.intelio.ir",
+      type: "main",
+      technologies: [
+        "React 19",
+        "Vite",
+        "TanStack Query",
+        "Redux Toolkit",
+        "Tailwind CSS",
+        "React Router",
+        "Zod",
+        "Chart.js",
+        "Docker",
+        "Nginx",
+      ],
+    },
+    {
+      id: "8",
+      title: "کارتینا واچ",
+      description:
+        "پروژه فریلنسری فول‌استک که کاملاً توسط خودم ساخته شده — اپلیکیشن وب مدرن فروشگاهی با رندر سمت سرور، مدیریت پایگاه داده و پنل مدیریت کامل.",
+      url: "https://kartina-watch.ir",
+      type: "main",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "TailwindCSS",
+      ],
+    },
+    {
+      id: "9",
+      title: "لندینگ آی‌لایو",
+      description:
+        "صفحه فرود پلتفرم آی‌لایو، ساخته شده با Next.js و متصل به بک‌اند WordPress CMS برای مدیریت محتوا.",
+      url: "https://demo.ilive.ir",
+      type: "main",
+      technologies: ["Next.js", "WordPress CMS", "REST API"],
+    },
+    {
+      id: "10",
+      title: "لندینگ اینتلیو",
+      description:
+        "صفحه فرود پلتفرم اینتلیو، ساخته شده با Next.js و متصل به بک‌اند WordPress CMS برای مدیریت محتوا.",
+      url: "https://demo.intelio.ir",
+      type: "main",
+      technologies: ["Next.js", "WordPress CMS", "REST API"],
+    },
+    {
+      id: "11",
+      title: "پنل‌های مدیریت QCK",
+      description:
+        "مجموعه ۵ پنل مدیریتی برای پلتفرم‌های مختلف. در حال حاضر قابل مشاهده عمومی نیست — برای نمایش در دسترس است.",
+      url: "",
+      type: "main",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Ant Design",
+        "TanStack Query",
       ],
     },
     {
@@ -168,6 +235,23 @@ export const cvDataFa: CVData = {
         "سیستم مدیریت اعلان‌های لحظه‌ای با یکپارچه‌سازی WebSocket و صف‌بندی اولویت‌دار.",
       url: "https://github.com/keihanaf/notification-center",
       type: "mini",
+    },
+    {
+      id: "12",
+      title: "Voice AI",
+      description:
+        "بازسازی سیگنال صوتی با الگوریتم‌های فراابتکاری تکاملی. فایل .wav آپلود یا ضبط کنید و همگرایی GA، PSO یا DE را به سمت شکل موج اصلی به صورت لحظه‌ای مشاهده کنید.",
+      url: "https://github.com/keihanaf/voice-ai",
+      type: "mini",
+      technologies: [
+        "Next.js",
+        "React 19",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "Prisma",
+        "Web Audio API",
+        "Recharts",
+      ],
     },
   ],
   socials: [
